@@ -1,0 +1,18 @@
+/*    my override styles here -  because i'm better than them!    */
+
+.inline{
+    display: inline;
+}
+
+.center{
+    text-align: center;
+}
+
+.form-horizontal .controls {
+    margin-left: 0;
+}
+
+.form-horizontal .control-group,
+.control-group{
+    margin-bottom: 0;
+}
