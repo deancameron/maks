@@ -1,11 +1,24 @@
 /*    my override styles here -  because i'm better than them!    */
+.bold{
+    font-weight: bold;
+}
 
+.red{
+    color: red;
+}
 .inline{
     display: inline;
 }
 
+.left{
+    text-align: left;
+}
 .center{
     text-align: center;
+}
+
+td.right{
+    text-align: right;
 }
 
 .form-horizontal .controls {

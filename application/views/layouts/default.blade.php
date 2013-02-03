@@ -27,6 +27,7 @@
               <li><a href="{{ URL::base() }}">Home</a></li>
               @if ( !Auth::guest() )   
               <li>{{ HTML::link('../expenses/new', 'Create New') }}</li>
+              <li>{{ HTML::link('../expenses/', 'Show Expenses') }}</li>
               <li>{{ HTML::link('vendors', 'Vendors') }}</li>
               <li>{{ HTML::link('types', 'Types') }}</li>
               @endif

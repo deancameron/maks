@@ -128,6 +128,7 @@ Route::post('expenses', array('before' => 'auth', function(){
     $expense->user_id = Auth::user()->id;
     $expense->name = $input['name'];
     $expense->amount = $input['amount'];
+    $expense->sum = Expense::sum('amount');
     
     $expense->vendor_id = $input['vendor'];
     $expense->save();
@@ -140,7 +141,7 @@ Route::post('expenses', array('before' => 'auth', function(){
 
     $expenses = Expense::all();
 
-    return View::make('expenses.show')->with('expenses', $expenses);
+    return View::make('expenses.show')->with('expenses', $expenses)->with('sum', $sum);
 }));
 
 
