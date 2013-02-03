@@ -1,4 +1,7 @@
 /*    my override styles here -  because i'm better than them!    */
+body{
+    padding-top: 60px;
+}
 .bold{
     font-weight: bold;
 }

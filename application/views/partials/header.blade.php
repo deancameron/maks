@@ -8,17 +8,6 @@
     <meta name="author" content="">
     {{ Asset::container('bootstrapper')->styles(); }}
     {{ Asset::container('bootstrapper')->scripts(); }}
-    <script type="text/javascript">
-    $(function() {
-        $("a").tooltip();
-    });
-        
-    </script>
-    <style type="text/css">
-        body{
-            padding-top: 60px;
-        }
-    </style>
-
+    {{ HTML::script('laravel/js/scripts.js') }}
     {{ HTML::style('laravel/css/main.css') }}
 </head>
