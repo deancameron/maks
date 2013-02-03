@@ -13,7 +13,7 @@
             {{ HTML::link('login', 'Login') }}
             || {{ HTML::link('newuser', 'Create User') }}
             @else
-            howdy
+            howdy {{ Auth::user()->name }}
             @endif
             @if(Auth::check()) || 
             {{ HTML::link('logout', 'Logout') }} 

@@ -6,10 +6,10 @@
         <thead>
             <tr>
                 <th>expense</th>
-                <th>amount</th>
-                <th>date</th>
+                <th>vendor</th> 
                 <th>type</th>
-                <th>vendor</th>                         
+                <th>date</th>
+                <th>amount</th>                        
             </tr>
         </thead> 
         <tbody>
@@ -17,8 +17,6 @@
         @foreach($expenses as $expense)
             <tr>
                 <td>{{ $expense->name }} </td>
-                <td>{{ $expense->amount }}</td>
-                <td>{{ $expense->date }}</td>
                 <td>{{ $expense->vendor()->first()->name }}</td>
                 <td><?php if ($expense->types()) {
                     foreach ($expense->types()->get() as $type) {
@@ -26,6 +24,8 @@
                             }        
                 } ?>
                 </td>
+                <td>{{ $expense->date }}</td>
+                <td>{{ $expense->amount }}</td>
             </tr>
             
         @endforeach

@@ -32,3 +32,8 @@ td.right{
 .control-group{
     margin-bottom: 0;
 }
+
+td, li, .chex
+{
+    text-transform: capitalize;
+}
