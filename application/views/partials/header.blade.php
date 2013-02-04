@@ -8,6 +8,8 @@
     <meta name="author" content="">
     {{ Asset::container('bootstrapper')->styles(); }}
     {{ Asset::container('bootstrapper')->scripts(); }}
+    {{ HTML::script('chosen/chosen.jquery.js') }}
+    {{ HTML::style('chosen/chosen.css') }}
     {{ HTML::script('laravel/js/scripts.js') }}
     {{ HTML::style('laravel/css/main.css') }}
 </head>

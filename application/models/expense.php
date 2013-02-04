@@ -16,4 +16,12 @@ class Expense extends Eloquent
     {
         return $this->belongs_to('Vendor');
     }
+
+    public function get_total()
+    {
+        $expensesTotal = Expense::where('user_id','=',$this->user_id)->sum('amount');
+        //setlocale(LC_MONETARY, 'en_US');
+        return money_format('%i', $expensesTotal) . "\n";
+    }
+
 }

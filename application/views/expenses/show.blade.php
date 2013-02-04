@@ -18,17 +18,23 @@
             <tr>
                 <td>{{ $expense->name }} </td>
                 <td>{{ $expense->vendor()->first()->name }}</td>
-                <td><?php if ($expense->types()) {
+                <td><?php 
+                    if ($expense->types()) {
                     foreach ($expense->types()->get() as $type) {
                                 echo $type->name .', ';
                             }        
-                } ?>
+                        } 
+                    ?>
                 </td>
                 <td>{{ $expense->date }}</td>
-                <td>{{ $expense->amount }}</td>
+                <td class="bold">{{ $expense->amount }}</td>
             </tr>
             
         @endforeach
+            <tr>
+                <td class="bold right" colspan='4'>Total: </td>
+                <td class="bold red">${{ $expense->total }}
+            </tr>
     @else
         <tr>
             <td colspan="5">no expenses? what the...</td>

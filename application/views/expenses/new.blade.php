@@ -12,9 +12,15 @@
         </select>
         <a href="#addVendor"  data-toggle="modal" rel="tooltip" title="enter the name of the place you went">add vendor</a>
         <p>type <a href="#addType" data-toggle="modal" rel="tooltip" title="add a type of expense">add type</a></p>
-            @foreach($types as $type)
-               <span class="chex"><input type="checkbox" name="types[]" value={{ $type->id }}> {{$type->name}}</span><br>
-            @endforeach
+        
+
+        <select name="type" multiple="true" class="chosen">
+            
+           
+                @foreach($types as $type)
+                    <option value={{$type->id}}>{{ $type->name }}</option>
+                @endforeach
+        </select>
         <br>
         {{ Form::label('name ', 'name') }}
         {{ Form::text('name')}}
